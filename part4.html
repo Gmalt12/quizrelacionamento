@@ -1,0 +1,246 @@
+<!-- SCREEN: PERFIL -->
+<div class="screen" id="screen-profile">
+  <div class="quiz-header">
+    <div class="logo">Melto</div>
+  </div>
+  <div class="screen-content">
+    <h2 class="screen-title" style="text-align:center">Com base nas suas respostas, este é o seu perfil</h2>
+    <div class="profile-bar-wrap">
+      <p class="profile-label">Seu potencial amoroso</p>
+      <div class="profile-track">
+        <div class="profile-fill" id="profile-fill" style="width:0%"></div>
+      </div>
+      <div class="profile-markers">
+        <span>Baixo</span>
+        <span>Moderado</span>
+        <span class="profile-marker-active">▲ Alto</span>
+        <span>Extremo</span>
+      </div>
+    </div>
+    <div class="profile-field">
+      <div class="profile-field-label">🚨 Problema principal:</div>
+      Falta de química
+    </div>
+    <div class="profile-field">
+      <div class="profile-field-label">💡 Habilidades desejadas:</div>
+      Iniciar ou manter conversas
+    </div>
+    <div class="profile-field">
+      Flertar de forma natural
+    </div>
+    <button class="btn-primary" style="margin-top:20px" onclick="next(); animateProfileBar()">Continuar</button>
+  </div>
+</div>
+
+<!-- SCREEN: LOADING -->
+<div class="screen" id="screen-loading">
+  <div class="quiz-header">
+    <div class="logo">Melto</div>
+  </div>
+  <div class="loading-screen">
+    <h2>Carregando seu plano personalizado</h2>
+    <div class="load-item" style="opacity:0.5">
+      <div>
+        <div>Definindo seu perfil</div>
+        <div class="load-bar" id="bar1"></div>
+      </div>
+      <span class="load-pct" id="pct1">0%</span>
+    </div>
+    <div class="load-item" style="opacity:0.5">
+      <div>
+        <div>Adaptando ao seu estilo</div>
+        <div class="load-bar" id="bar2"></div>
+      </div>
+      <span class="load-pct" id="pct2">0%</span>
+    </div>
+    <div class="load-item" style="opacity:0.5">
+      <div>
+        <div>Selecionando ferramentas</div>
+        <div class="load-bar" id="bar3"></div>
+      </div>
+      <span class="load-pct" id="pct3">0%</span>
+    </div>
+    <div class="load-item" style="opacity:0.5">
+      <div>
+        <div>Priorizando desafios</div>
+        <div class="load-bar" id="bar4"></div>
+      </div>
+      <span class="load-pct" id="pct4">0%</span>
+    </div>
+    <div class="testimonial"
+      style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:440px">
+      <div class="testimonial-header">
+        <span class="testimonial-name" id="modal-testimonial-name">Jordan, 34</span>
+        <span class="testimonial-stars">★★★★★</span>
+      </div>
+      <p id="modal-testimonial-text">Finalmente recebi uma resposta para uma mensagem que ficava pensando por horas. O
+        Melto me mostrou exatamente como reescrevê-la.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" onclick="answerModal()">×</button>
+    <p class="modal-label">Para avançar, especifique</p>
+    <h3 class="modal-title" id="modal-question">Você prefere ter orientação de um especialista?</h3>
+    <div class="modal-grid">
+      <button class="modal-btn" onclick="answerModal()">
+        <span>👎</span> Não
+      </button>
+      <button class="modal-btn" onclick="answerModal()">
+        <span>👍</span> Sim
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: SALES PAGE -->
+<div class="screen sales-page" id="screen-sales">
+  <div class="sales-sticky">
+    <div>
+      <div class="timer-label">Esta oferta termina em:</div>
+      <div class="timer-value" id="sales-timer">14:59</div>
+    </div>
+    <button class="sales-cta-top" onclick="alert('Redirecionando para checkout!')">Obter Meu Plano</button>
+  </div>
+
+  <div class="sales-section">
+    <h2>Escreva com confiança.<br>Receba respostas na hora</h2>
+
+    <!-- ANTES E DEPOIS -->
+    <div class="ba-grid">
+      <div class="ba-card">
+        <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=300&q=80" alt="Antes">
+        <div class="ba-label antes">❌ ANTES</div>
+      </div>
+      <div class="ba-card">
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=300&q=80" alt="Depois">
+        <div class="ba-label depois">✅ DEPOIS</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px">
+      <div style="text-align:center">
+        <div style="font-size:12px;color:var(--text-muted)">Nível da vida amorosa</div>
+        <div style="font-weight:800">Iniciante</div>
+        <div style="display:flex;gap:3px;margin-top:4px">
+          <div style="height:5px;width:24px;border-radius:99px;background:var(--red)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:rgba(255,255,255,0.1)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:rgba(255,255,255,0.1)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:rgba(255,255,255,0.1)"></div>
+        </div>
+      </div>
+      <div style="font-size:28px;font-weight:900">»</div>
+      <div style="text-align:center">
+        <div style="font-size:12px;color:var(--text-muted)">Nível da vida amorosa</div>
+        <div style="font-weight:800">Avançado</div>
+        <div style="display:flex;gap:3px;margin-top:4px">
+          <div style="height:5px;width:24px;border-radius:99px;background:var(--green)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:var(--green)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:var(--green)"></div>
+          <div style="height:5px;width:24px;border-radius:99px;background:rgba(255,255,255,0.1)"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Seu plano personalizado</h2>
+
+    <!-- PLANOS -->
+    <div style="margin:16px 0">
+      <div class="plan-card selected" id="plan-1m" onclick="selectPlan('plan-1m')">
+        <div class="plan-badge">✦ MAIS POPULAR</div>
+        <div class="plan-name">Plano de 3 meses</div>
+        <div class="plan-price">R$14,99 <span>/ mês</span></div>
+        <div class="plan-desc">Faturado como R$44,99 · Economize 60%</div>
+      </div>
+      <div class="plan-card" id="plan-3m" onclick="selectPlan('plan-3m')">
+        <div class="plan-name">Plano de 1 mês</div>
+        <div class="plan-price">R$37,99 <span>/ mês</span></div>
+        <div class="plan-desc">Faturado mensalmente</div>
+      </div>
+      <div class="plan-card" id="plan-12m" onclick="selectPlan('plan-12m')">
+        <div class="plan-name">Plano de 12 meses</div>
+        <div class="plan-price">R$9,99 <span>/ mês</span></div>
+        <div class="plan-desc">Faturado como R$119,99 · Economize 73%</div>
+      </div>
+    </div>
+
+    <button class="sales-cta-main" onclick="alert('Redirecionando para checkout!')">Obter Meu Plano →</button>
+
+    <div class="guarantee">
+      <strong>🛡️ Garantia de 7 dias</strong>
+      Se não estiver satisfeito nos primeiros 7 dias, devolvemos seu dinheiro — sem perguntas.
+    </div>
+
+    <!-- DEPOIMENTOS -->
+    <h2 style="margin-top:28px">O que dizem nossos usuários</h2>
+
+    <div class="testimonial">
+      <div class="testimonial-header">
+        <span class="testimonial-name">Jordan, 34</span>
+        <span class="testimonial-stars">★★★★★</span>
+      </div>
+      <p>Finalmente recebi uma resposta para uma mensagem que ficava pensando por horas. O Melto me mostrou exatamente
+        como reescrevê-la.</p>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-header">
+        <span class="testimonial-name">Chris, 25</span>
+        <span class="testimonial-stars">★★★★★</span>
+      </div>
+      <p>Parei de sumir por ansiedade. Esse app me deu estrutura, mudança de mentalidade e suporte que eu nem sabia que
+        precisava.</p>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-header">
+        <span class="testimonial-name">Marcus, 29</span>
+        <span class="testimonial-stars">★★★★★</span>
+      </div>
+      <p>Eu estava sempre no modo "vou deixar para depois". O Melto me deu as palavras certas no momento certo. Já
+        marquei três encontros esse mês.</p>
+    </div>
+
+    <button class="sales-cta-main" onclick="alert('Redirecionando para checkout!')">Começar Agora →</button>
+    <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px">Cancele quando quiser · Pagamento
+      seguro</p>
+  </div>
+  <div class="safe-bottom"></div>
+</div>
+
+</div><!-- end quiz-app -->
+
+<!-- MODAL (modal movido para fora do quiz-app para z-index correto) -->
+
+<script src="js/quiz.js"></script>
+<script>
+  // Adicionar steps extras ao array
+  steps.splice(steps.indexOf('screen-profile'), 0, 'screen-splash4', 'screen-splash5');
+
+  // Override showStep para iniciar loading corretamente
+  const _origShowStep = showStep;
+  window.showStep = function (index) {
+    _origShowStep(index);
+    const id = steps[index];
+    if (id === 'screen-loading') {
+      setTimeout(showModal, 800);
+      // run loading animation in background
+      const items = document.querySelectorAll('.load-item');
+      items.forEach(i => i.style.opacity = '1');
+    }
+    if (id === 'screen-profile') {
+      animateProfileBar();
+    }
+    if (id === 'screen-sales') {
+      startTimer();
+    }
+  };
+
+  function selectPlan(id) {
+    document.querySelectorAll('.plan-card').forEach(c => c.classList.remove('selected'));
+    document.getElementById(id).classList.add('selected');
+  }
+</script>
+</body>
+
+</html>
