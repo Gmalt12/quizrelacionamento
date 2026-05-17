@@ -148,8 +148,8 @@ const steps = [
     id: "splash_coach",
     type: "splash",
     title: "Você não está sozinho nisso!",
-    content: "Estamos aqui para te apoiar<br><br>“No Melto, passamos mais de 3 anos descobrindo o que realmente constrói conexão — e como liderar com clareza e inteligência emocional”<br><br>Daniel K., Coach Principal",
-    image: "prints-quiz/13.jpeg",
+    content: "Estamos aqui para te apoiar<br><br>“No Nexo, passamos mais de 3 anos descobrindo o que realmente constrói conexão — e como liderar com clareza e inteligência emocional”<br><br>Mateo R., Coach Principal",
+    image: "assets/mateo_r.jpg",
     btnText: "Continuar"
   },
   {
@@ -229,7 +229,7 @@ const steps = [
     id: "splash_comparison",
     type: "splash",
     title: "Você é reflexivo – mas fica travado pensando demais",
-    content: "Lose Get te ajuda a dizer a coisa certa, manter a energia viva e entendê-la — sem ficar na dúvida o tempo todo.",
+    content: "Nexo te ajuda a dizer a coisa certa, manter a energia viva e entendê-la — sem ficar na dúvida o tempo todo.",
     image: "prints-quiz/23.jpeg",
     btnText: "Continuar"
   },
@@ -368,7 +368,7 @@ function renderStep() {
                 <span class="rating-score">${step.rating}</span>
                 <span class="rating-stars">★★★★★</span>
             </div>
-            <p class="rating-text">Avaliações de usuários da Lose Get</p>
+            <p class="rating-text">Avaliações de usuários da Nexo</p>
         `;
         screen.appendChild(wrapper);
     }
@@ -1065,12 +1065,12 @@ function renderSales(container) {
 
             <!-- Testimonials -->
             <div style="padding: 0 20px;">
-                <h2 style="text-align:center; font-size:20px; margin-bottom:20px;">quem usa a Lose Get diz:</h2>
+                <h2 style="text-align:center; font-size:20px; margin-bottom:20px; display:flex; align-items:center; justify-content:center; gap:8px;">quem usa a <img src="assets/nexo_logo.png" alt="Nexo Logo" style="height:20px; object-fit:contain; display:inline-block; vertical-align:middle; margin-top:-2px;"> diz:</h2>
                 <div class="testimonial-card">
                     <div class="testimonial-avatar"></div>
                     <div class="testimonial-name">Max, 43</div>
                     <div class="stars"><span class="stars-yellow">★★★★★</span> 5.0</div>
-                    <p class="testimonial-text">"Sempre travava na hora de mandar mensagem, tipo batia um branco... agora me sinto muito mais tranquilo e até engraçado às vezes kkkk. O Melto me mostrou exatamente o que me faltava"</p>
+                    <p class="testimonial-text">"Sempre travava na hora de mandar mensagem, tipo batia um branco... agora me sinto muito mais tranquilo e até engraçado às vezes kkkk. O Nexo me mostrou exatamente o que me faltava"</p>
                 </div>
                 <div class="dots">
                     <div class="dot active"></div>
@@ -1082,7 +1082,7 @@ function renderSales(container) {
             <!-- Score Card -->
             <div class="score-card" style="margin: 0 20px 40px;">
                 <div class="score-main">4.7 <span class="stars-yellow">★★★★★</span></div>
-                <div class="score-label">Avg. score do usuário da Lose Get</div>
+                <div class="score-label" style="display:flex; align-items:center; justify-content:center; gap:6px;">Avg. score do usuário da <img src="assets/nexo_logo.png" alt="Nexo Logo" style="height:14px; object-fit:contain; display:inline-block; vertical-align:middle; margin-top:-1px;"></div>
                 <p style="font-size:10px; margin-top:10px;">Com a confiança de mais de 25K homens no mundo todo</p>
             </div>
 
