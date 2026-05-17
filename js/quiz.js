@@ -350,16 +350,7 @@ function renderStep() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <div class="logo">
-            <div class="nexo-logo" style="font-size: 18px;" aria-label="Nexo">
-                <span class="nexo-n">N</span>
-                <span class="nexo-e">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <span class="nexo-x">X</span>
-                <span class="nexo-o">O</span>
-            </div>
+            <img src="assets/nexo_logo.png" alt="Nexo" style="height: 20px; width: auto; object-fit: contain; vertical-align: middle; display: block; margin: 0 auto;">
         </div>
     `;
   }
@@ -774,17 +765,8 @@ function renderCustom(container, step) {
 <section class="honest-step">
   <div class="honest-content">
 
-    <div class="nexo-logo-wrap honest-logo-wrap">
-      <div class="nexo-logo" aria-label="Nexo">
-        <span class="nexo-n">N</span>
-        <span class="nexo-e">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span class="nexo-x">X</span>
-        <span class="nexo-o">O</span>
-      </div>
+    <div class="nexo-logo-wrap honest-logo-wrap" style="padding: 20px 0 8px; margin-bottom: 40px; display: flex; justify-content: center; align-items: center;">
+      <img src="assets/nexo_logo.png" alt="Nexo" style="height: 38px; width: auto; object-fit: contain; display: block; margin: 0 auto;">
     </div>
 
     <h1 class="honest-title">Obrigado por ser honesto!</h1>
