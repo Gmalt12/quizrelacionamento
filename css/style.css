@@ -1290,13 +1290,16 @@ h1 span.blue {
 
 /* HONEST THANKS STEP */
 .honest-step {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   min-height: 100vh;
   background: #171717;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
-  position: relative;
+  overflow-y: auto;
+  z-index: 100;
 }
 
 .honest-content {
@@ -1502,5 +1505,73 @@ h1 span.blue {
     border-radius: 22px;
     font-size: 22px;
   }
+}
+
+/* NEXO HTML/CSS LOGO */
+.nexo-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+
+.nexo-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  background: transparent;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.nexo-logo span {
+  display: inline-block;
+}
+
+.nexo-n,
+.nexo-o {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
+}
+
+.nexo-x {
+  color: #087bff;
+  text-shadow: 0 0 14px rgba(8, 123, 255, 0.45);
+}
+
+.nexo-e {
+  width: 1.125em;
+  height: 0.8em;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nexo-e span {
+  display: block;
+  height: 0.1875em;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.16);
+}
+
+.nexo-e span:nth-child(1) {
+  width: 1.125em;
+}
+
+.nexo-e span:nth-child(2) {
+  width: 0.875em;
+}
+
+.nexo-e span:nth-child(3) {
+  width: 1.125em;
 }
 

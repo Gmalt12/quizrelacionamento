@@ -349,7 +349,18 @@ function renderStep() {
         <button class="back-btn" id="back-btn" onclick="back()">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-        <div class="logo"><img src="assets/nexo_logo.png" alt="Nexo" style="height: 26px; max-height: 26px; width: auto; object-fit: contain; vertical-align: middle; display: block;"></div>
+        <div class="logo">
+            <div class="nexo-logo" style="font-size: 18px;" aria-label="Nexo">
+                <span class="nexo-n">N</span>
+                <span class="nexo-e">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="nexo-x">X</span>
+                <span class="nexo-o">O</span>
+            </div>
+        </div>
     `;
   }
   
@@ -763,7 +774,18 @@ function renderCustom(container, step) {
 <section class="honest-step">
   <div class="honest-content">
     <div class="honest-logo">
-      <img src="assets/nexo_logo.png" alt="Nexo Logo" style="height: 28px; max-height: 28px; width: auto; object-fit: contain; vertical-align: middle; display: block; margin: 0 auto;">
+      <div class="nexo-logo-wrap" style="padding: 0 0 24px;">
+        <div class="nexo-logo" style="font-size: 32px;" aria-label="Nexo">
+          <span class="nexo-n">N</span>
+          <span class="nexo-e">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nexo-x">X</span>
+          <span class="nexo-o">O</span>
+        </div>
+      </div>
     </div>
 
     <h1 class="honest-title">
