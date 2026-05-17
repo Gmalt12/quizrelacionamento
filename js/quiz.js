@@ -292,11 +292,8 @@ const steps = [
   },
   {
     id: "splash_final",
-    type: "splash",
-    title: "obrigado por ser honesto!",
-    content: "Sabemos que se abrir nem sempre é fácil, mas os resultados vão valer a pena. Só mais algumas perguntas e seu plano estará pronto!",
-    image: "prints-quiz/29.jpeg",
-    btnText: "Continuar"
+    type: "custom",
+    template: "honestThanks"
   },
   {
     id: "invest_time",
@@ -343,7 +340,31 @@ function renderStep() {
   const step = steps[currentStep];
   const container = document.getElementById("quiz-container");
   container.innerHTML = "";
+
+  if (step.type !== "sales") {
+    const app = document.getElementById("quiz-app");
+    app.classList.remove("sales-page");
+    const header = document.querySelector("header");
+    header.innerHTML = `
+        <button class="back-btn" id="back-btn" onclick="back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="logo"><img src="assets/nexo_logo.png" alt="Nexo" style="height: 26px; max-height: 26px; width: auto; object-fit: contain; vertical-align: middle; display: block;"></div>
+    `;
+  }
   
+  if (['splash', 'loading', 'profile', 'sales', 'email', 'custom'].includes(step.type)) {
+    document.getElementById("progress-container").style.display = "none";
+  } else {
+    document.getElementById("progress-container").style.display = "flex";
+  }
+
+  if (step.type === "custom") {
+    document.querySelector("header").style.display = "none";
+  } else {
+    document.querySelector("header").style.display = "flex";
+  }
+
   // Progress Bar
   updateProgress();
   
@@ -358,6 +379,8 @@ function renderStep() {
     renderEmail(screen);
   } else if (step.type === "sales") {
     renderSales(screen);
+  } else if (step.type === "custom") {
+    renderCustom(screen, step);
   } else {
     // Top Rating if available
     if (step.rating) {
@@ -732,6 +755,69 @@ function renderSlider(container, step) {
   });
 
   nextBtn.onclick = () => next();
+}
+
+function renderCustom(container, step) {
+  if (step.template === "honestThanks") {
+    container.innerHTML = `
+<section class="honest-step">
+  <div class="honest-content">
+    <div class="honest-logo">
+      <img src="assets/nexo_logo.png" alt="Nexo Logo" style="height: 28px; max-height: 28px; width: auto; object-fit: contain; vertical-align: middle; display: block; margin: 0 auto;">
+    </div>
+
+    <h1 class="honest-title">
+      Obrigado por ser honesto!
+    </h1>
+
+    <p class="honest-description">
+      Sabemos que se abrir nem sempre é fácil,
+      mas os resultados vão valer a pena. Só mais
+      algumas perguntas e seu plano estará
+      pronto!
+    </p>
+
+    <div class="honest-benefits">
+      <div class="honest-timeline" aria-hidden="true">
+        <div class="honest-dot"></div>
+        <div class="honest-line"></div>
+        <div class="honest-dot"></div>
+        <div class="honest-line"></div>
+        <div class="honest-dot"></div>
+      </div>
+
+      <div class="honest-benefit-list">
+        <div class="honest-benefit-item">
+          Pare de pensar demais e escreva com confiança
+        </div>
+
+        <div class="honest-benefit-item">
+          Consiga respostas que levem a uma conexão real
+        </div>
+
+        <div class="honest-benefit-item">
+          Saiba o que dizer — e quando dizer
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="honest-image-section">
+    <img
+      class="honest-hero-image"
+      src="assets/honest-woman.png"
+      alt="Mulher usando celular"
+    >
+
+    <div class="honest-button-wrap">
+      <button class="honest-continue-button" type="button" onclick="next()">
+        Continuar
+      </button>
+    </div>
+  </div>
+</section>
+    `;
+  }
 }
 
 function renderSplash(container, step) {
