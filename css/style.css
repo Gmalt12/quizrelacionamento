@@ -1303,44 +1303,38 @@ h1 span.blue {
 }
 
 .honest-content {
-  padding: 34px 22px 0;
+  padding: 20px 20px 0;
   position: relative;
   z-index: 2;
-}
-
-.honest-logo {
-  text-align: center;
-  margin-bottom: 84px;
 }
 
 .honest-title {
   text-align: center;
   color: #ffffff;
-  font-size: 35px;
-  line-height: 1.12;
+  font-size: 26px;
+  line-height: 1.18;
   font-weight: 800;
-  letter-spacing: -0.8px;
-  margin-bottom: 34px;
+  letter-spacing: -0.4px;
+  margin-bottom: 22px;
 }
 
 .honest-description {
-  max-width: 365px;
-  margin: 0 auto 50px;
+  max-width: 340px;
+  margin: 0 auto 30px;
   text-align: center;
   color: #ffffff;
-  font-size: 24px;
-  line-height: 1.38;
+  font-size: 16px;
+  line-height: 1.45;
   font-weight: 400;
-  letter-spacing: -0.45px;
 }
 
 .honest-benefits {
   width: 100%;
-  max-width: 368px;
+  max-width: 340px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 40px 1fr;
-  column-gap: 28px;
+  grid-template-columns: 28px 1fr;
+  column-gap: 16px;
   align-items: start;
 }
 
@@ -1348,20 +1342,20 @@ h1 span.blue {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 .honest-dot {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #ffffff;
   flex: 0 0 auto;
 }
 
 .honest-line {
-  width: 4px;
-  height: 44px;
+  width: 3px;
+  height: 28px;
   background: #ffffff;
   border-radius: 999px;
   flex: 0 0 auto;
@@ -1370,32 +1364,31 @@ h1 span.blue {
 .honest-benefit-list {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
 }
 
 .honest-benefit-item {
   color: #ffffff;
-  font-size: 23px;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.35;
   font-weight: 500;
-  letter-spacing: -0.35px;
 }
 
 .honest-image-section {
   position: relative;
   width: 100%;
-  margin-top: 50px;
-  min-height: 410px;
+  margin-top: 30px;
+  min-height: 320px;
   overflow: hidden;
 }
 
 .honest-hero-image {
   width: 100%;
-  height: 460px;
+  height: 360px;
   display: block;
   object-fit: cover;
-  object-position: center;
-  filter: brightness(0.92);
+  object-position: center center;
+  filter: brightness(0.94);
 }
 
 .honest-image-section::before {
@@ -1407,7 +1400,7 @@ h1 span.blue {
   background: linear-gradient(
     180deg,
     #171717 0%,
-    rgba(23,23,23,0.72) 38%,
+    rgba(23,23,23,0.75) 38%,
     rgba(23,23,23,0) 100%
   );
   pointer-events: none;
@@ -1417,93 +1410,75 @@ h1 span.blue {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 34px;
+  bottom: 24px;
   z-index: 3;
-  padding: 0 22px;
+  padding: 0 20px;
 }
 
 .honest-continue-button {
   width: 100%;
-  height: 78px;
+  height: 56px;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   background: #007da6;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 12px 32px rgba(0,125,166,0.3);
+  box-shadow: 0 10px 24px rgba(0,125,166,0.20);
   transition: all 0.2s;
 }
 
 .honest-continue-button:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 @media (max-width: 390px) {
-  .honest-content {
-    padding-left: 18px;
-    padding-right: 18px;
+  .nexo-logo {
+    font-size: 38px;
+    gap: 8px;
+    letter-spacing: 5px;
   }
 
-  .honest-logo {
-    margin-bottom: 74px;
+  .nexo-e {
+    width: 46px;
+    height: 32px;
+  }
+
+  .nexo-e span {
+    height: 8px;
+  }
+
+  .nexo-e span:nth-child(1),
+  .nexo-e span:nth-child(3) {
+    width: 46px;
+  }
+
+  .nexo-e span:nth-child(2) {
+    width: 36px;
   }
 
   .honest-title {
-    font-size: 31px;
-    margin-bottom: 30px;
+    font-size: 24px;
   }
 
   .honest-description {
-    font-size: 21px;
-    line-height: 1.42;
-    margin-bottom: 44px;
-  }
-
-  .honest-benefits {
-    grid-template-columns: 36px 1fr;
-    column-gap: 22px;
-  }
-
-  .honest-dot {
-    width: 19px;
-    height: 19px;
-  }
-
-  .honest-line {
-    height: 41px;
-  }
-
-  .honest-benefit-list {
-    gap: 20px;
+    font-size: 15px;
   }
 
   .honest-benefit-item {
-    font-size: 20px;
-    line-height: 1.28;
-  }
-
-  .honest-image-section {
-    margin-top: 44px;
-    min-height: 390px;
+    font-size: 15px;
   }
 
   .honest-hero-image {
-    height: 430px;
-  }
-
-  .honest-button-wrap {
-    padding: 0 20px;
-    bottom: 28px;
+    height: 330px;
   }
 
   .honest-continue-button {
-    height: 72px;
-    border-radius: 22px;
-    font-size: 22px;
+    height: 54px;
+    font-size: 19px;
   }
 }
 
@@ -1514,19 +1489,23 @@ h1 span.blue {
   justify-content: center;
   align-items: center;
   background: transparent;
-  padding: 24px 0;
+  padding: 20px 0 8px;
   box-sizing: border-box;
+}
+
+.honest-logo-wrap {
+  margin-bottom: 40px;
 }
 
 .nexo-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.2em;
+  gap: 10px;
   background: transparent;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 900;
-  letter-spacing: 0.125em;
+  letter-spacing: 6px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -1547,8 +1526,8 @@ h1 span.blue {
 }
 
 .nexo-e {
-  width: 1.125em;
-  height: 0.8em;
+  width: 54px;
+  height: 38px;
   position: relative;
   display: inline-flex;
   flex-direction: column;
@@ -1557,21 +1536,42 @@ h1 span.blue {
 
 .nexo-e span {
   display: block;
-  height: 0.1875em;
+  height: 9px;
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.16);
 }
 
 .nexo-e span:nth-child(1) {
-  width: 1.125em;
+  width: 54px;
 }
 
 .nexo-e span:nth-child(2) {
-  width: 0.875em;
+  width: 42px;
 }
 
 .nexo-e span:nth-child(3) {
-  width: 1.125em;
+  width: 54px;
+}
+
+/* Scaled header logo */
+.logo .nexo-logo {
+  font-size: 18px;
+  gap: 4px;
+  letter-spacing: 2px;
+}
+.logo .nexo-e {
+  width: 23px;
+  height: 16px;
+}
+.logo .nexo-e span {
+  height: 4px;
+}
+.logo .nexo-e span:nth-child(1),
+.logo .nexo-e span:nth-child(3) {
+  width: 23px;
+}
+.logo .nexo-e span:nth-child(2) {
+  width: 18px;
 }
 

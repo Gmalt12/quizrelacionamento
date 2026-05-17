@@ -773,30 +773,25 @@ function renderCustom(container, step) {
     container.innerHTML = `
 <section class="honest-step">
   <div class="honest-content">
-    <div class="honest-logo">
-      <div class="nexo-logo-wrap" style="padding: 0 0 24px;">
-        <div class="nexo-logo" style="font-size: 32px;" aria-label="Nexo">
-          <span class="nexo-n">N</span>
-          <span class="nexo-e">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <span class="nexo-x">X</span>
-          <span class="nexo-o">O</span>
-        </div>
+
+    <div class="nexo-logo-wrap honest-logo-wrap">
+      <div class="nexo-logo" aria-label="Nexo">
+        <span class="nexo-n">N</span>
+        <span class="nexo-e">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="nexo-x">X</span>
+        <span class="nexo-o">O</span>
       </div>
     </div>
 
-    <h1 class="honest-title">
-      Obrigado por ser honesto!
-    </h1>
+    <h1 class="honest-title">Obrigado por ser honesto!</h1>
 
     <p class="honest-description">
-      Sabemos que se abrir nem sempre é fácil,
-      mas os resultados vão valer a pena. Só mais
-      algumas perguntas e seu plano estará
-      pronto!
+      Sabemos que se abrir nem sempre é fácil, mas os resultados vão valer a pena.
+      Só mais algumas perguntas e seu plano estará pronto!
     </p>
 
     <div class="honest-benefits">
@@ -809,17 +804,9 @@ function renderCustom(container, step) {
       </div>
 
       <div class="honest-benefit-list">
-        <div class="honest-benefit-item">
-          Pare de pensar demais e escreva com confiança
-        </div>
-
-        <div class="honest-benefit-item">
-          Consiga respostas que levem a uma conexão real
-        </div>
-
-        <div class="honest-benefit-item">
-          Saiba o que dizer — e quando dizer
-        </div>
+        <div class="honest-benefit-item">Pare de pensar demais e escreva com confiança</div>
+        <div class="honest-benefit-item">Consiga respostas que levem a uma conexão real</div>
+        <div class="honest-benefit-item">Saiba o que dizer — e quando dizer</div>
       </div>
     </div>
   </div>
@@ -829,12 +816,10 @@ function renderCustom(container, step) {
       class="honest-hero-image"
       src="assets/honest-woman.png"
       alt="Mulher usando celular"
-    >
+    />
 
     <div class="honest-button-wrap">
-      <button class="honest-continue-button" type="button" onclick="next()">
-        Continuar
-      </button>
+      <button class="honest-continue-button" type="button" onclick="next()">Continuar</button>
     </div>
   </div>
 </section>
