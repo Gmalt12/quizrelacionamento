@@ -432,44 +432,57 @@ h1 span.blue {
 }
 
 .sales-header {
-  padding: 10px 15px;
-  background: rgba(23, 23, 23, 0.95);
-  backdrop-filter: blur(10px);
-  position: sticky;
+  padding: 12px 16px;
+  background: rgba(23, 23, 23, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #333;
-  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
 }
 
 .header-timer-box {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-timer-label {
-    font-size: 10px;
-    color: var(--text-muted);
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .header-timer-value {
-    font-weight: 800;
-    color: var(--red);
-    font-size: 14px;
+  font-weight: 800;
+  color: #EF4444;
+  font-size: 15px;
 }
 
 .btn-header {
-    background: var(--primary-blue);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
+  background: #007da6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 125, 166, 0.25);
+  transition: all 0.2s;
+}
+
+.btn-header:active {
+  transform: scale(0.96);
 }
 
 /* BEFORE AFTER BLOCK */
@@ -505,32 +518,58 @@ h1 span.blue {
 
 .ba-level-box {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 0 20px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
-.ba-level-item {
+.ba-level-header {
+    font-size: 13px;
+    color: var(--text-white);
+    margin-bottom: 12px;
     text-align: center;
-    flex: 1;
 }
 
-.ba-level-title {
-    font-size: 10px;
+.ba-level-header span {
     color: var(--text-muted);
-    margin-bottom: 4px;
 }
 
-.ba-level-name {
-    font-size: 12px;
+.ba-level-header strong {
     font-weight: 700;
-    margin-bottom: 5px;
+    color: var(--text-white);
+}
+
+.ba-level-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.ba-level-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.ba-level-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.ba-level-arrow {
+    font-size: 18px;
+    color: #555;
 }
 
 .ba-bars {
     display: flex;
-    gap: 2px;
+    gap: 3px;
     justify-content: center;
 }
 

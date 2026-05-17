@@ -900,16 +900,16 @@ function renderSales(container) {
     header.innerHTML = `
         <div class="sales-header">
             <div class="header-timer-box">
-                <span class="header-timer-label">Esta oferta termina em:</span>
-                <span class="header-timer-value" id="sales-timer">14:59</span>
+                <span class="header-timer-label">Sua oferta termina em:</span>
+                <span class="header-timer-value" id="sales-timer">05:00</span>
             </div>
             <button class="btn-header" onclick="goToCheckout()">Obter Meu Plano</button>
         </div>
     `;
 
     container.innerHTML = `
-        <div class="sales-content" style="padding: 20px 0;">
-            <h1 style="padding: 0 20px;">Escreva com confiança,<br>receba respostas na hora</h1>
+        <div class="sales-content" style="padding: 20px 0; margin-top: 60px;">
+            <h1 style="padding: 0 20px; font-size: 24px; text-align: center; margin-bottom: 24px;">Escreva com confiança,<br>Receba respostas na hora</h1>
             
             <!-- Before After -->
             <div class="ba-container" style="padding: 0 20px;">
@@ -924,24 +924,28 @@ function renderSales(container) {
                 </div>
             </div>
 
+            <!-- Comparativo Nível de Avanço -->
             <div class="ba-level-box">
-                <div class="ba-level-item">
-                    <div class="ba-level-title">Nível da vida amorosa</div>
-                    <div class="ba-level-name">Iniciante</div>
-                    <div class="ba-bars">
-                        <div class="ba-bar red"></div>
-                        <div class="ba-bar gray"></div>
-                        <div class="ba-bar gray"></div>
-                    </div>
+                <div class="ba-level-header">
+                    <span>Nível de avanço: </span><strong>Iniciante › Avançado</strong>
                 </div>
-                <div style="width:40px"></div>
-                <div class="ba-level-item">
-                    <div class="ba-level-title">Nível da vida amorosa</div>
-                    <div class="ba-level-name">Avançado</div>
-                    <div class="ba-bars">
-                        <div class="ba-bar green"></div>
-                        <div class="ba-bar green"></div>
-                        <div class="ba-bar green"></div>
+                <div class="ba-level-comparison">
+                    <div class="ba-level-side">
+                        <span class="ba-level-label">Iniciante</span>
+                        <div class="ba-bars">
+                            <div class="ba-bar red"></div>
+                            <div class="ba-bar gray"></div>
+                            <div class="ba-bar gray"></div>
+                        </div>
+                    </div>
+                    <div class="ba-level-arrow">➜</div>
+                    <div class="ba-level-side">
+                        <span class="ba-level-label">Avançado</span>
+                        <div class="ba-bars">
+                            <div class="ba-bar green"></div>
+                            <div class="ba-bar green"></div>
+                            <div class="ba-bar green"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1175,15 +1179,32 @@ function selectPlan(planId) {
 }
 
 function startTimer() {
-    let time = 15 * 60;
+    const duration = 5 * 60; // 5 minutes in seconds
+    const storageKey = "sales_timer_end";
+    let endTime = localStorage.getItem(storageKey);
+
+    if (!endTime) {
+        endTime = Date.now() + duration * 1000;
+        localStorage.setItem(storageKey, endTime);
+    } else {
+        endTime = parseInt(endTime, 10);
+    }
+
     const el = document.getElementById("sales-timer");
-    const interval = setInterval(() => {
-        const m = Math.floor(time / 60);
-        const s = time % 60;
-        el.textContent = `${m}:${s < 10 ? '0' : ''}${s}`;
-        time--;
-        if (time < 0) clearInterval(interval);
-    }, 1000);
+    if (!el) return;
+
+    function update() {
+        const remaining = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+        const m = Math.floor(remaining / 60);
+        const s = remaining % 60;
+        el.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        if (remaining <= 0) {
+            clearInterval(interval);
+        }
+    }
+
+    update();
+    const interval = setInterval(update, 1000);
 }
 
 function goToCheckout() {
